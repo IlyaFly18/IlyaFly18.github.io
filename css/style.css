@@ -1633,7 +1633,7 @@ input[type="search"]::-webkit-input-placeholder {
     }
 
     .header-logo {
-        margin: 0 0 0 10%;
+        margin: 0 auto;
     }
 
     .burger-label {
@@ -1642,10 +1642,9 @@ input[type="search"]::-webkit-input-placeholder {
         height: 25px;
         cursor: pointer;
         position: relative;
-        top:0;
-        left:0;
+        top:-25px;
+        left:-25px;
         z-index: 6;
-        margin: 0 20px 0 0;
     }
 
     .burger-label-line {
@@ -1655,7 +1654,7 @@ input[type="search"]::-webkit-input-placeholder {
         background-color: #fff;
         position: absolute;
         left: 0;
-        top: -30px;
+        top: 0;
     }
 
     .burger-label-line:nth-child(1) {
@@ -1663,14 +1662,14 @@ input[type="search"]::-webkit-input-placeholder {
     }
 
     .burger-label-line:nth-child(2) {
-        top: -20px;
+        top: 10px;
         opacity: 1;
         transition: opacity 1s;
     }
 
     .burger-label-line:nth-child(3) {
         transition: transform 1s;
-        top: -10px;
+        top: 20px;
     }
 
     #burger {
@@ -1681,10 +1680,10 @@ input[type="search"]::-webkit-input-placeholder {
         margin: 0;
         padding: 0;
         width: 70%;
-        position: fixed;
         z-index: 5;
         left: 100%;
-        top: 0;
+        top: -50px;
+        position: absolute;
         transition: left 1s;
         background-color: #c7b299;
         overflow: hidden;
@@ -1899,21 +1898,16 @@ input[type="search"]::-webkit-input-placeholder {
         opacity: 1;
     }
 
-    #burger:checked ~ .burger-label{
-        position: fixed;
-        top:50px;
-        left:calc(100% - 70px);
-    }
     #burger:checked ~ .burger-label > .burger-label-line:nth-child(2) {
         opacity: -1;
     }
 
     #burger:checked ~ .burger-label > .burger-label-line:nth-child(1) {
-        transform: rotate(45deg) translate(0, 12.5px);
+        transform: rotate(45deg) translate(0, 13.5px);
     }
 
     #burger:checked ~ .burger-label > .burger-label-line:nth-child(3) {
-        transform: rotate(-45deg) translate(0, -12.5px);
+        transform: rotate(-45deg) translate(0, -13.5px);
     }
     #burger:checked ~ .main-menu-list>form>.burger-search-label{
         opacity: 1;
